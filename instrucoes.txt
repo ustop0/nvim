@@ -22,7 +22,10 @@ e rode no terminal: ./install.sh
 Após instalar as fontes abra o seu terminal e vá preferencias e selecione a fonte Hack Regular
 
 Após fazer todos esses passos abra o nvim e rode o comando :PlugInstall e espere terminar
-a instalação dos plugins, quando terminar feche o nvim e abra novamente para testar
+a instalação dos plugins, quando terminar feche o nvim e vá para a pasta home/.vim/plugged/YouCompleteMe e rode
+no terminal python3 install.py --all
+
+Após todos esses passos é só abrir o nvim que deve estar funcionando
 
 
 >>>PRONTO NVIM PERSONALIZADO RODANDO!<<<

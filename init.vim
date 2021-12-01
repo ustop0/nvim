@@ -20,6 +20,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'dracula/vim', { 'as': 'dracula' }
 
 Plug 'preservim/nerdtree'
+Plug 'VundleVim/Vundle.vim'
 
 call plug#end()
 
