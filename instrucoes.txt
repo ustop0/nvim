@@ -1,0 +1,29 @@
+Instale o nvim{
+	sudo apt install nvim
+}	
+
+>>Copie o conteúdo do repositório e cole na pasta home/.config<<
+
+>>>>INSTRUÇÕES PARA INSTALAR AS MINHAS SETTINGS<<<<
+
+instalar dependencias do YouCompleteMe{
+
+	sudo apt install gcc g++ cmake make build-essential vim-nox python3-dev
+}
+
+servidor de linguagens ccls{
+	sudo apt install ccls
+}
+
+
+Instale as fontes powershell para estilizar o airline(barra de status funcionar), 
+contidas no arquivo fonts-master.zip do repositório, para instalar extraia o arquivo
+e rode no terminal: ./install.sh
+Após instalar as fontes abra o seu terminal e vá preferencias e selecione a fonte Hack Regular
+
+Após fazer todos esses passos abra o nvim e rode o comando :PlugInstall e espere terminar
+a instalação dos plugins, quando terminar feche o nvim e abra novamente para testar
+
+
+>>>PRONTO NVIM PERSONALIZADO RODANDO!<<<
+
