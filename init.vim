@@ -21,6 +21,7 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 
 Plug 'preservim/nerdtree'
 Plug 'VundleVim/Vundle.vim'
+Plug 'preservim/nerdcommenter'
 
 call plug#end()
 
