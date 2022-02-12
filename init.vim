@@ -44,7 +44,11 @@ map <C-s> :w<CR>
 nnoremap  <leader> n : NERDTreeFocus <CR> 
 nnoremap  <C-n> :NERDTree <CR>
 nnoremap  <C-n> :NERDTreeToggle <CR> 
-nnoremap  <Cf> : NERDTreeFind <CR> 
+annoremap  <C-f> :NERDTreeFind <CR>
+nnoremap  <C-l> :tabn <CR>
+nnoremap  <C-h> :tabp <CR>
+nnoremap  <C-L> :tabnew <CR>
+nnoremap  <C-c> :tabclose <CR> 
 
 " YOUCOMPLETEME
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
