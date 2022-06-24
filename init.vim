@@ -23,6 +23,12 @@ Plug 'preservim/nerdtree'
 Plug 'VundleVim/Vundle.vim'
 Plug 'preservim/nerdcommenter'
 
+" Permite mover os textos de forma agil
+Plug 'matze/vim-move'
+
+" Vim terminal
+Plug 'voldikss/vim-floaterm'
+
 call plug#end()
 
 " TEMA DE CORES
@@ -44,7 +50,7 @@ map <C-s> :w<CR>
 nnoremap  <leader> n : NERDTreeFocus <CR> 
 nnoremap  <C-n> :NERDTree <CR>
 nnoremap  <C-n> :NERDTreeToggle <CR> 
-annoremap  <C-f> :NERDTreeFind <CR>
+nnoremap  <C-f> :NERDTreeFind <CR>
 nnoremap  <C-l> :tabn <CR>
 nnoremap  <C-h> :tabp <CR>
 nnoremap  <C-L> :tabnew <CR>
@@ -71,6 +77,11 @@ let g:SuperTabDefaultCompletionType = '<C-n>'
 let g:UltiSnipsExpandTrigger = "<tab>"
 let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+
+" VIM MOVE - move trechos do código selecionados
+let g:move_key_modifier = 'C'
+let g:move_key_modifier_visualmode = 'S'
+
 
 " VIM AIRLINE - barra de status
 let g:airline_powerline_fonts = 1
