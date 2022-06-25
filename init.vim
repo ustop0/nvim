@@ -42,6 +42,16 @@ Plug 'voldikss/vim-floaterm'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
+"--------------- PHP
+Plug 'ncm2/ncm2'
+Plug 'roxma/nvim-yarp'
+Plug 'roxma/vim-hug-neovim-rpc'
+
+Plug 'phpactor/phpactor', { 'do': ':call phpactor#Update()', 'for': 'php'}
+Plug 'phpactor/ncm2-phpactor', {'for': 'php'}
+Plug 'ncm2/ncm2-ultisnips'
+Plug 'StanAngeloff/php.vim', {'for': 'php'} "Sintax highlight
+
 call plug#end()
 
 
@@ -73,6 +83,14 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 "nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 
 
+"---------------------------------- NCM2
+" parameter expansion for selected entry via Enter
+inoremap <silent> <expr> <CR> (pumvisible() ? ncm2_ultisnips#expand_or("\<CR>", 'n') : "\<CR>")
+" cycle through completion entries with tab/shift+tab
+inoremap <expr> <TAB> pumvisible() ? "\<c-n>" : "\<TAB>"
+inoremap <expr> <s-tab> pumvisible() ? "\<c-p>" : "\<TAB>"
+
+
 " CONFIGURAÇÃO DOS PLUGINS E NVIM
 "----------------------------------- NVIM
 colorscheme pinkmare
@@ -102,9 +120,20 @@ let g:ycm_language_server =
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 let g:SuperTabDefaultCompletionType = '<C-n>'
-let g:UltiSnipsExpandTrigger = "<tab>"
-let g:UltiSnipsJumpForwardTrigger = "<tab>"
-let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+let g:UltiSnipsExpandTrigger = "<c-j>"
+let g:UltiSnipsJumpForwardTrigger = "<c-j>"
+let g:UltiSnipsJumpBackwardTrigger = "<c-b>"
+"--------- PHP
+let g:ultisnips_php_scalar_types = 1
+
+
+"----------------------------------- NCM2 
+augroup ncm2
+  au!
+  autocmd BufEnter * call ncm2#enable_for_buffer()
+  au User Ncm2PopupOpen set completeopt=noinsert,menuone,noselect
+  au User Ncm2PopupClose set completeopt=menuone
+augroup END
 
 
 "----------------------------------- NERD COMMENTER
