@@ -1,8 +1,7 @@
 let extensao = expand('%:e')
 
 call plug#begin('~/.vim/plugged')
-" Plugin de Exemplo inicial
-Plug 'terroo/vim-simple-emoji'
+
 
 " PUGLINS
 Plug 'matsuuu/pinkmare'
@@ -20,6 +19,7 @@ Plug 'ervandew/supertab'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'terroo/vim-simple-emoji'
 
 "----------------VIM MOVE
 Plug 'matze/vim-move'
@@ -56,7 +56,7 @@ call plug#end()
 
 
 " MAPEAMENTOS DE TECLADO DOS PLUGINS
-"---------------------------------- NEOVIM
+"---------------------------------- NVIM
 map <C-q> :quit<CR>
 map <C-s> :w<CR>
 
@@ -94,12 +94,24 @@ inoremap <expr> <s-tab> pumvisible() ? "\<c-p>" : "\<TAB>"
 " CONFIGURAÇÃO DOS PLUGINS E NVIM
 "----------------------------------- NVIM
 colorscheme pinkmare
+
+" Use NeoSolarized
+"let g:neosolarized_termtrans=1
+"runtime ./colors/NeoSolarized.vim
+"colorscheme NeoSolarized
+
 "hi! MatchParen cterm=NONE,bold gui=NONE,bold guibg=NONE guifg=#FFFF00
 set nu!
 set mouse=a
 set title
 set cursorline
 set expandtab ts=4 sw=4 ai
+syntax enable
+"set termguicolors
+set winblend=0
+set wildoptions=pum
+set pumblend=5
+set background=dark
 
 
 "---------------------------------- YOUCOMPLETEME
@@ -165,4 +177,32 @@ let g:airline#extensions#tabline#formatter = 'unique_tail'
 "let g:airline_left_sep = '▶'
 "let g:airline_right_sep = '«'
 "let g:airline_right_sep = '◀'
+
+
+
+" --------------------------- THEME SETTINGS
+" Syntax theme "{{{
+" ---------------------------------------------------------------------
+
+" true color
+"if exists("&termguicolors") && exists("&winblend")
+  "syntax enable
+  "set termguicolors
+  "set winblend=0
+  "set wildoptions=pum
+  "set pumblend=5
+  "set background=dark
+  " Use NeoSolarized
+  "let g:neosolarized_termtrans=1
+  "runtime ./colors/NeoSolarized.vim
+  "colorscheme NeoSolarized
+"endif
+
+"}}}
+
+" Extras "{{{
+" ---------------------------------------------------------------------
+" set exrc
+"}}}
+" vim: set foldmethod=marker foldlevel=0:
 
