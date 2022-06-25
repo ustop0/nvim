@@ -66,10 +66,14 @@ nnoremap  <leader> n : NERDTreeFocus <CR>
 nnoremap  <C-n> :NERDTree <CR>
 nnoremap  <C-n> :NERDTreeToggle <CR> 
 nnoremap  <C-f> :NERDTreeFind <CR>
-nnoremap  <C-l> :tabn <CR>
-nnoremap  <C-h> :tabp <CR>
-nnoremap  <C-L> :tabnew <CR>
-nnoremap  <C-c> :tabclose <CR> 
+nnoremap  <C-p> :tabn <CR>
+nnoremap  <C-n> :tabp <CR>
+nnoremap  <C-n> :tabnew <CR>
+nnoremap  <C-C> :tabclose <CR> 
+
+"----------------------------------- FLOAT TERMINAL
+nnoremap  <C-t> :FloatermNew <CR> 
+nnoremap  <C-r> :FloatermToggle <CR> 
 
 
 "---------------------------------- VIM TELESCOPE - buscar arquivos
