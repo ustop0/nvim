@@ -52,6 +52,9 @@ Plug 'phpactor/ncm2-phpactor', {'for': 'php'}
 Plug 'ncm2/ncm2-ultisnips'
 Plug 'StanAngeloff/php.vim', {'for': 'php'} "Sintax highlight
 
+"-------------- THEMAS
+Plug 'whatyouhide/vim-gotham'
+
 call plug#end()
 
 
@@ -66,9 +69,9 @@ nnoremap  <leader> n : NERDTreeFocus <CR>
 nnoremap  <C-n> :NERDTree <CR>
 nnoremap  <C-n> :NERDTreeToggle <CR> 
 nnoremap  <C-f> :NERDTreeFind <CR>
-nnoremap  <C-p> :tabn <CR>
-nnoremap  <C-n> :tabp <CR>
-nnoremap  <C-n> :tabnew <CR>
+nnoremap  <C-i> :tabn <CR>
+nnoremap  <C-p> :tabp <CR>
+nnoremap  <C-m> :tabnew <CR>
 nnoremap  <C-C> :tabclose <CR> 
 
 "----------------------------------- FLOAT TERMINAL
@@ -97,25 +100,25 @@ inoremap <expr> <s-tab> pumvisible() ? "\<c-p>" : "\<TAB>"
 
 " CONFIGURAÇÃO DOS PLUGINS E NVIM
 "----------------------------------- NVIM
-colorscheme pinkmare
+"colorscheme pinkmare
 
 " Use NeoSolarized
 "let g:neosolarized_termtrans=1
 "runtime ./colors/NeoSolarized.vim
 "colorscheme NeoSolarized
 
-"hi! MatchParen cterm=NONE,bold gui=NONE,bold guibg=NONE guifg=#FFFF00
 set nu!
 set mouse=a
 set title
 set cursorline
 set expandtab ts=4 sw=4 ai
 syntax enable
+set t_Co=256    
 "set termguicolors
-set winblend=0
-set wildoptions=pum
-set pumblend=5
-set background=dark
+"set winblend=0
+"set wildoptions=pum
+"set pumblend=5
+"set background=dark
 
 
 "---------------------------------- YOUCOMPLETEME
@@ -167,14 +170,57 @@ let g:move_key_modifier_visualmode = 'S'
 
 "----------------------------------- VIM AIRLINE - barra de status
 let g:airline_powerline_fonts = 1
-let g:airline_theme = 'dracula'
 "habilida as tabs no topo do editor, alternar entre guias
 let g:airline#extensions#tabline#enabled = 1
 "unique tail deixa os nomes padrão dos arquivos
 let g:airline#extensions#tabline#formatter = 'unique_tail'
-
 "let g:airline#extensions#tabline#left_sep = ' '
 "let g:airline#extensions#tabline#left_alt_sep = '|'
+
+"--------------------- AIRLINE - THEMES
+"let g:airline_theme = 'dracula'
+"let g:airline_theme='dark'
+"let g:airline_theme='badwolf'
+let g:airline_theme='ravenpower'
+"let g:airline_theme='simple'
+"let g:airline_theme='term'
+"let g:airline_theme='ubaryd'
+"let g:airline_theme='laederon'
+"let g:airline_theme='kolor'
+"let g:airline_theme='molokai'
+"let g:airline_theme='powerlineish'
+
+"--------------------- BACKGROUND - COLORS
+"colorscheme pinkmare
+"colorscheme rigel
+colorscheme iceberg
+"Gotham theme {{
+"colorscheme gotham
+"let g:gotham_airline_emphasised_insert = 0
+"let g:lightline = { 'colorscheme': 'gotham' }
+"let g:lightline = { 'colorscheme': 'gotham256' }
+"}}
+
+"colorscheme Atelier_ForestDark
+"colorscheme simple_dark
+"colorscheme nord
+"colorscheme thor
+
+"colorscheme tango
+"colorscheme railscasts
+"colorscheme vividchalk
+"colorscheme distinguished
+"colorscheme monokai
+"colorscheme molokai
+"colorscheme ir_black
+"colorscheme neodark
+"colorscheme kolor
+"colorscheme gotham
+"colorscheme jellybeans 
+"volorscheme desertEx
+"colorscheme skittles_berry
+"colorscheme skittles_dark
+"colorscheme codeblocks_dark
 
 " powerline symbols
 "let g:airline_left_sep = '»'
@@ -184,7 +230,7 @@ let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 
 
-" --------------------------- THEME SETTINGS
+" --------------------------- EDITOR THEME SETTINGS
 " Syntax theme "{{{
 " ---------------------------------------------------------------------
 
