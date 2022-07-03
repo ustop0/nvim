@@ -112,6 +112,7 @@ set mouse=a
 set title
 set cursorline
 set expandtab ts=4 sw=4 ai
+set nowrap
 syntax enable
 set t_Co=256    
 "set termguicolors
