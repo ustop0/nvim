@@ -1,5 +1,5 @@
 Instale o nvim{
-	sudo apt install nvim
+	sudo apt install neovim
 }	
 
 >>Copie o conteúdo do repositório e cole na pasta home/.config<<
