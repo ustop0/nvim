@@ -1,0 +1,13 @@
+xmodmap -e "keycode 9 = Caps_Lock NoSymbol Caps_Lock"   #this will make Esc to act as Caps Lock
+xmodmap -e "keycode 66 = Escape NoSymbol Escape"        #this will make Caps Lock to act as Esc
+
+
+Para obter essa alteração para cada sessão, após executar os comandos anteriores crie um arquivo chamado .xmodmapcom os novos mapas de teclado, usando o seguinte comando: 
+
+xmodmap -pke > ~/.xmodmap
+
+
+Em seguida, crie um arquivo chamado .xinitrcem seu diretório inicial, contendo a seguinte linha/comando: 
+
+xmodmap .xmodmap
+
